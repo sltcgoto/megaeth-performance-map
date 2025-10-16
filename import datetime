@@ -1,0 +1,5 @@
+import datetime, csv
+now = datetime.datetime.utcnow().isoformat()
+with open("latency_log.csv","a",newline="") as f:
+    csv.writer(f).writerow([now,"0xFakeTx","15","Quick test"])
+print("Logged sample latency.")
